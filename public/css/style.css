@@ -33108,7 +33108,8 @@ html:not(.lt-ie10) .not-animated {
 	line-height: 48px;
 	cursor: pointer;
 	color: #fff;
-	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 100%;
 	display: none;
 }
 
@@ -33494,6 +33495,16 @@ html:not(.lt-ie10) .not-animated {
 	align-items: center;
 	flex-wrap: wrap;
 }
+.asd{
+	position: relative;
+	max-width: 1485px;
+	padding: 10px 15px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
 
 @media (min-width: 1200px) {
 	.rd-navbar-static .rd-navbar-inner {
@@ -33517,7 +33528,16 @@ html:not(.lt-ie10) .not-animated {
 	display: flex;
 	align-items: center;
 }
-
+.showhide{
+	display: none;
+}
+ @media (max-width:767px){
+	.showhide{
+		display: block;
+		position: fixed;
+		width: 100%;
+	}
+ }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.rd-navbar-static .rd-navbar-panel {
 		justify-content: center;
