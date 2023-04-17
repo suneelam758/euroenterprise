@@ -7,8 +7,8 @@ app.use(express.static("public"));
 app.use(express.json());
 
 const port = process.env.PORT || 3000;
-const user = 'betushyam01@gmail.com';
-const pass = 'ozdmptbpqsexornk';
+const user = 'techbyson@gmail.com';
+const pass = 'rbizmfisvwaghdgs';
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html")
@@ -32,7 +32,7 @@ app.post("/", (req, res) => {
 
     const mailOptions = {
         from: req.body.email,
-        to: "suneelam369@gmail.com",
+        to: "euroenterprise01@gmail.com",
         subject: `Message from ${req.body.email}: ${req.body.subject}`,
         text: req.body.message
     }
