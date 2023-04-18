@@ -35122,7 +35122,7 @@ ul ul, ul ol, ol ul, ol ol {
  * @licesne      MIT License
  */
 .swiper-container {
-	height: auto !important;
+	height: 500px !important;
 	min-height: 0 !important;
 	margin: 0 auto;
 	position: relative;
@@ -35130,6 +35130,35 @@ ul ul, ul ol, ol ul, ol ol {
 	/* Fix of Webkit flickering */
 	z-index: 1;
 }
+@media (max-width: 1025px) {
+	.swiper-container{
+		height: 345px !important;
+	}
+}
+@media (max-width: 770px) {
+	.swiper-container{
+		height: 280px !important;
+	}
+}
+@media (max-width: 435px) {
+	.swiper-container{
+		margin-top: 8% !important;
+		height: 150px !important;
+	}
+}
+@media (max-width: 378px) {
+	.swiper-container{
+		margin-top: 8% !important;
+		height: 130px !important;
+	}
+}
+@media (max-width: 330px) {
+	.swiper-container{
+		margin-top: 8% !important;
+		height: 110px !important;
+	}
+}
+
 
 .swiper-container .section-100-vh {
 	padding-top: 80px;
@@ -35849,7 +35878,7 @@ ul ul, ul ol, ol ul, ol ol {
 }
 
 .swiper-secondary {
-	background: #868e96;
+	background: #fff;
 }
 
 @media (min-width: 768px) {
@@ -35859,6 +35888,7 @@ ul ul, ul ol, ol ul, ol ol {
 		bottom: auto;
 		transform: translateY(-50%);
 	}
+	
 }
 
 .swiper-secondary .swiper-button-prev {
