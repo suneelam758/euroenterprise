@@ -177,13 +177,14 @@
               <form action="/" class="rd-mailform text-left contact-form" data-form-output="form-output-global">
                 <div class="row">
                   <div class="col-md-6">
-                    <input type="text" class="form-input" placeholder="Name" name="" id="name">
+                    <input type="text" class="form-input" placeholder="Full Name" name="" id="name">
                   </div>
                   <div class="col-md-6"><input type="text" class="form-input" placeholder="Email" name="" id="email">
                   </div>
-                  <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Book Now" id="message" cols="30" rows="10"></textarea></div>
+                  <div class="col-md-6"><input type="text" class="form-input" placeholder="Service Type" name="" id="subject"></div>
+                  <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Message" id="message" cols="30" rows="10"></textarea></div>
                 </div>
-                <input type="submit" id="send-btn" class="btn btn-form btn-default submit" value="Book Euro">
+                <input type="submit" id="send-btn" class="btn btn-form btn-default submit" value="Send Message">
             </form>
             </div>
           </div>
@@ -407,18 +408,17 @@
         <div class="container">
           <h2><span class="small" id="book">Contact form</span>Book Our Service.</h2>
           
-          <form action="/" class="rd-mailform text-left contact-form" data-form-output="form-output-global">
+          <form action="/" class="rd-mailform text-left qcontact-form" data-form-output="form-output-global">
             <div class="row">
               <div class="col-md-6">
-                <input type="text" class="form-input" placeholder="Name" name="" id="name">
+                <input type="text" class="form-input" placeholder="Full Name" name="" id="qname">
               </div>
-              <div class="col-md-6"><input type="text" class="form-input" placeholder="Email" name="" id="email">
+              <div class="col-md-6"><input type="text" class="form-input" placeholder="Email" name="" id="qemail">
               </div>
-              <div class="col-md-6"><input type="text" class="form-input" placeholder="Service Type (Repair , Installation)" name="" id="subject"></div>
-              <div class="col-md-6"><input type="text" class="form-input" placeholder="Brand Name(Aqua Guard)" name="" id="subject"></div>
-              <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Start writing your query with address and phone number optional" id="message" cols="30" rows="10"></textarea></div>
+              <div class="col-md-6"><input type="text" class="form-input" placeholder="Service Type" name="" id="qsubject"></div>
+              <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Message" id="qmessage" cols="30" rows="10"></textarea></div>
             </div>
-            <input type="submit" id="send-btn" class="btn btn-form btn-default submit" value="Send Message">
+            <input type="submit" id="qsend-btn" class="btn btn-form btn-default submit" value="Send Message">
         </form>
         </div>
       </section>
@@ -522,14 +522,70 @@
         </section>
       </footer>
     </div>
+
+    <!-- -------------modal--------------------- -->
+    
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" id="check" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Book Euro Service</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+              <h5 class="text-danger">Call now at <a href="tel: +91-798 764 7239">+91-798 764 7239</a></h5><hr>
+              <form action="/" class="rd-mailform text-left mcontact-form" data-form-output="form-output-global">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" class="form-input" placeholder="Full Name" name="" id="mname">
+                  </div>
+                  <div class="col-md-6"><input type="text" class="form-input" placeholder="Email" name="" id="memail">
+                  </div>
+                  <div class="col-md-6"><input type="text" class="form-input" placeholder="subject" name="" id="msubject"></div>
+                  <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Message" id="mmessage" cols="30" rows="10"></textarea></div>
+                </div>
+                <input type="submit" id="msend-btn" class="btn btn-form btn-default submit" value="Send Message">
+            </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button"  class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<script>
+ 
+ function as(){
+  var x = document.getElementById('check');
+  x.click();
+ }
+ setTimeout(as, 5000);
+
+</script>
+
+    <!-- -------------modal--------------------- -->
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/modalcontact.js"></script>
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
     </script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/query.js"></script>
   </body>
 </html>
 
