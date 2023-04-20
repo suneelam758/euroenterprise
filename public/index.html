@@ -12,6 +12,7 @@
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
+    <button type="button" id="check" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="display: none;">Open Modal</button>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="page-loader">
       <div>
@@ -52,7 +53,7 @@
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                 <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
-                <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img class="brand-device" src="images/brands/logo.png" width="229" height="58" alt="Home service"><img class="brand-mobile" src="images/brands/logo.png" width="229" height="58" alt="Home service"></a></div>
+                <div class="rd-navbar-brand"><a class="brand-name" href="index.html" style="display: flex;"><img class="brand-device" src="images/svg/EUROLOGOO-removebg-preview.png" style="height: 200px; width: 130px;" alt="Home service"><img class="brand-mobile" src="images/svg/eurologo.png" width="229" height="58" alt="Home service"><p class="eurologo" style="color: rgb(16, 139, 210);">Euro</p><p class="eurologo" style="color: rgb(7, 151, 62);">Enterprises</p></a></div>
               </div>
               <div class="rd-navbar-collapse animated">
                 <div class="rd-navbar-collapse-items">
@@ -110,11 +111,6 @@
           </nav>
         </div>
       </header>
-      <!-- <section class="section-75 section-md-120 section-lg-120 section-xl-150" id="custom-way-point">
-        <div class="container-fluid">
-          <img src="images/ro.png" alt="">
-        </div>
-      </section> -->
 
       <!-- -----------------carousel header---------------- -->
       <div class="swiper-container swiper-slider swiper-secondary" data-autoplay="3500" data-height="100vh" data-min-height="300px">
@@ -415,8 +411,8 @@
               </div>
               <div class="col-md-6"><input type="text" class="form-input" placeholder="Email" name="" id="qemail">
               </div>
-              <div class="col-md-6"><input type="text" class="form-input" placeholder="Service Type" name="" id="qsubject"></div>
-              <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Message" id="qmessage" cols="30" rows="10"></textarea></div>
+              <div class="col-md-6"><input type="text" class="form-input" placeholder="Service Type(Repair, Install)" name="" id="qsubject"></div>
+              <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Brand name, service request" id="qmessage" cols="30" rows="10"></textarea></div>
             </div>
             <input type="submit" id="qsend-btn" class="btn btn-form btn-default submit" value="Send Message">
         </form>
@@ -430,19 +426,27 @@
           <div class="row row-40 justify-content-md-between">
             <div class="col-sm-6 col-lg-3"><img class="img-responsive" src="images/brands/aquafresh.png" alt="" width="360" height="404"/>
               <h6><a href="#">Aqua fresh</a></h6>
-              <!-- <p>Philip specializes in repairing electrical appliances and solving all kinds of electrical issues you may encounter.</p> -->
             </div>
             <div class="col-sm-6 col-lg-3"><img class="img-responsive" src="images/brands/aquaguard.png" alt="" width="360" height="404"/>
               <h6><a href="#">Aqua Guard</a></h6>
-              <!-- <p>Adam is responsible for finding a solution to all kinds of pipe, plumbing and heating breakages of modern buildings.</p> -->
             </div>
             <div class="col-sm-6 col-lg-3"><img class="img-responsive" src="images/brands/havells-removebg-preview.png" alt="" width="360" height="404"/>
               <h6><a href="#">Havells</a></h6>
-              <!-- <p>Phillip is our expert in servicing various appliances. He has experience of previous work in leading repair companies.</p> -->
             </div>
             <div class="col-sm-6 col-lg-3"><img class="img-responsive" src="images/brands/livpure-removebg-preview (1).png" alt="" width="360" height="404"/>
               <h6><a href="#">Livpure</a></h6>
-              <!-- <p>John  has over 15 years of experience  repairing home appliances. There is no job too big or too small for him.</p> -->
+            </div>
+            <div class="col-sm-6 col-lg-3"><img class="img-responsive" src="images/brands/pureit-ro.jpeg" alt="" width="360" height="404"/>
+              <h6><a href="#">Pureit</a></h6>
+            </div>
+            <div class="col-sm-6 col-lg-3"><img class="img-responsive" src="images/brands/nasaka-ro.png" alt="" width="360" height="350"/>
+              <h6><a href="#">Nasaka</a></h6>
+            </div>
+            <div class="col-sm-6 col-lg-3"><img class="img-responsive" src="images/brands/kent-ro-grand.jpg" alt="" width="360" height="404"/>
+              <h6><a href="#">Kent Ro</a></h6>
+            </div>
+            <div class="col-sm-6 col-lg-3"><img class="img-responsive" src="images/brands/zerob.jpg" alt="" width="360" height="404"/>
+              <h6><a href="#">Zero B RO</a></h6>
             </div>
           </div>
         </div>
@@ -452,7 +456,7 @@
         <section class="section-75 section-sm-80 section-md-100 section-xl-150">
           <div class="container">
             <div class="row text-md-left row-55">
-              <div class="col-md-6 col-xl-3 col-xxl-4"><a href="index.html"><img class="img-responsive" src="images/brands/default.png" alt="" width="229" height="58"/></a>
+              <div class="col-md-6 col-xl-3 col-xxl-4"><a href="index.html"><img class="img-responsive" src="images/svg/eurologo11E.png" alt="" width="190" height="38"/></a>
                 <p class="offset-top-20 offset-md-top-35 inset-xxl-right-30">We remain true to the same principles: providing superior services to our clients, putting safety first, genuine parts, creating opportunities for our people.</p>
               </div>
               <div class="col-sm-6 col-md-3 col-xl-2 col-lg-3"><span class="small text-spacing-340 text-white text-uppercase font-weight-bold page-footer-classic-title">About us</span>
@@ -498,9 +502,6 @@
                   <ul class="list-inline list-inline-lg offset-top-30 offset-md-top-40">
                     <li><a class="ioon icon-sm icon--school-bus-yellow-white fa-facebook" href="#"></a></li>
                     <li><a class="ioon icon-sm icon--school-bus-yellow-white fa-whatsapp" href="https://chat.whatsapp.com/IKGzsjI1WDj3G5we7kZGlv"></a></li>
-                    <!-- <li><a class="ioon icon-sm icon--school-bus-yellow-white fa-instagram" href="#"></a></li>
-                    <li><a class="ioon icon-sm icon--school-bus-yellow-white fa-google-plus" href="#"></a></li>
-                    <li><a class="ioon icon-sm icon--school-bus-yellow-white fa-pinterest-p" href="#"></a></li> -->
                   </ul>
                 </div>
               </div>
@@ -527,8 +528,6 @@
     
 <div class="container">
   <!-- Trigger the modal with a button -->
-  <button type="button" id="check" class="btn btn-info btn-lg" style="display:none;" data-toggle="modal" data-target="#myModal">A</button>
-
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -549,8 +548,8 @@
                   </div>
                   <div class="col-md-6"><input type="text" class="form-input" placeholder="Email" name="" id="memail">
                   </div>
-                  <div class="col-md-6"><input type="text" class="form-input" placeholder="subject" name="" id="msubject"></div>
-                  <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Message" id="mmessage" cols="30" rows="10"></textarea></div>
+                  <div class="col-md-6"><input type="text" class="form-input" placeholder="Service Type(Repair, Install)" name="" id="msubject"></div>
+                  <div class="col-md-6"><textarea name="" class="form-input"  placeholder="Your address, ro brands..." id="mmessage" cols="30" rows="10"></textarea></div>
                 </div>
                 <input type="submit" id="msend-btn" class="btn btn-form btn-default submit" value="Send Message">
             </form>
