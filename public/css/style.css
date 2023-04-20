@@ -35960,3 +35960,21 @@ ul ul, ul ol, ol ul, ol ol {
 		bottom: 40px;
 	}
 }
+.eurologo {
+	display: none;
+	color: transparent;
+}
+@media (max-width: 1199px) {
+	.eurologo {
+		display: block;
+		color: black;
+		margin-top: 10px;
+	}
+}
+@media (max-width: 360px) {
+	.eurologo {
+		display: block;
+		color: black;
+		font-size: 20px;
+	}
+}
